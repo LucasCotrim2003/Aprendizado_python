@@ -505,18 +505,105 @@
 
 # exercise Shopping cart program
 
-foods = []
-prices = []
-total = 0
+# foods = []
+# prices = []
+# total = 0
 
-while True:
-    food = input("Enter a food to buy (q to qut): ")
-    if food.lower() == "q":
-        break
+# while True:
+#     food = input("Enter a food to buy (q to qut): ")
+#     if food.lower() == "q":
+#         break
+#     else:
+#         price = float(input(f"Enter the price of a {food}: $"))
+#         foods.append(food)
+#         prices.append(price)
+
+# print("------- Your cart -------")
+
+# for food in foods:
+#     print(food, end=" ")
+
+# for price in prices:
+#     total += price
+
+# print(f"Your total is: ${total}")
+
+# 2d Lists -----------------------------------------------------------------------------------------------------------------
+
+# fruits = ["apple", "orange", "banana", "coconut"]
+# vegetables = ["celery", "carrots", "potatoes"]
+# meats = ["chicken", "fish", "turkey"]
+
+# groceries = [fruits, vegetables, meats]
+# print(groceries[2][1])
+#--------
+
+# groceries = [["apple", "orange", "banana", "coconut"], 
+#              ["celery", "carrots", "potatoes"], 
+#              ["chicken", "fish", "turkey"]]
+
+# for collection in groceries:
+#     for food in collection:
+#         print(food, end=" ")
+#     print()
+
+#exercise
+# num_pad = ((1, 2, 3),
+#            (4, 5, 6),
+#            (7, 8, 9),
+#            ("*", 0, "*"))
+
+# for row in num_pad:
+#     for num in row:
+#         print(num, end=" ")
+#     print()
+
+#exercise quiz game 
+
+questions = ("What's the biggest ocean in the world?", 
+             "What's the tallest land animal in the world?", 
+             "In what states is found the statue of liberty?", 
+             "What's the name of the planet closest to the sun?")
+
+options = (("A. Atlantic Ocean", "B. Indian Ocean", "C. Artic Ocean", "D. Pacific Ocean"), 
+           ("A. Hippopothamus", "B. Giraffe", "C. Elephant", "D. Rhinoceros"), 
+           ("A. USA", "B. France", "C. Brazil", "D. Russia"), 
+           ("A. Jupiter", "B. Mars", "C. Mercury", "D. Venus"))
+
+answers = ("D", "B", "A", "C")
+guesses = []
+score = 0
+question_num = 0
+
+for question in questions:
+    print("----------------------")
+    print(question)
+    for option in options[question_num]:
+        print(option)
+
+    guess = input("Enter (A, B, C, D): ").upper()
+    guesses.append(guess)
+    if guess == answers[question_num]:
+        score += 1
+        print("Correct")
     else:
-        price = float(input("Enter the price of a {food}: $"))
-        food.append(food)
-        prices.append(price)
+        print("Incorrect")
+        print(f"{answers[question_num]} is the correct answer")
+    question_num += 1
 
+    print("-----------------")
+    print("     Results     ")
+    print("-----------------")
 
+    print("answers: ", end="")
+    for answer in answers:
+        print(answer, end=" ")
+    print()
 
+    print("guesses: ", end="")
+    for guess in guesses:
+        print(guess, end=" ")
+    print()
+
+score = int(score / len(questions) * 100)
+print(f"Your score is: {score}%")
