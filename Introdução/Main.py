@@ -560,50 +560,113 @@
 
 #exercise quiz game 
 
-questions = ("What's the biggest ocean in the world?", 
-             "What's the tallest land animal in the world?", 
-             "In what states is found the statue of liberty?", 
-             "What's the name of the planet closest to the sun?")
+# questions = ("What's the biggest ocean in the world?", 
+#              "What's the tallest land animal in the world?", 
+#              "In what states is found the statue of liberty?", 
+#              "What's the name of the planet closest to the sun?")
 
-options = (("A. Atlantic Ocean", "B. Indian Ocean", "C. Artic Ocean", "D. Pacific Ocean"), 
-           ("A. Hippopothamus", "B. Giraffe", "C. Elephant", "D. Rhinoceros"), 
-           ("A. USA", "B. France", "C. Brazil", "D. Russia"), 
-           ("A. Jupiter", "B. Mars", "C. Mercury", "D. Venus"))
+# options = (("A. Atlantic Ocean", "B. Indian Ocean", "C. Artic Ocean", "D. Pacific Ocean"), 
+#            ("A. Hippopothamus", "B. Giraffe", "C. Elephant", "D. Rhinoceros"), 
+#            ("A. USA", "B. France", "C. Brazil", "D. Russia"), 
+#            ("A. Jupiter", "B. Mars", "C. Mercury", "D. Venus"))
 
-answers = ("D", "B", "A", "C")
-guesses = []
-score = 0
-question_num = 0
+# answers = ("D", "B", "A", "C")
+# guesses = []
+# score = 0
+# question_num = 0
 
-for question in questions:
-    print("----------------------")
-    print(question)
-    for option in options[question_num]:
-        print(option)
+# for question in questions:
+#     print("----------------------")
+#     print(question)
+#     for option in options[question_num]:
+#         print(option)
 
-    guess = input("Enter (A, B, C, D): ").upper()
-    guesses.append(guess)
-    if guess == answers[question_num]:
-        score += 1
-        print("Correct")
-    else:
-        print("Incorrect")
-        print(f"{answers[question_num]} is the correct answer")
-    question_num += 1
+#     guess = input("Enter (A, B, C, D): ").upper()
+#     guesses.append(guess)
+#     if guess == answers[question_num]:
+#         score += 1
+#         print("Correct")
+#     else:
+#         print("Incorrect")
+#         print(f"{answers[question_num]} is the correct answer")
+#     question_num += 1
 
-    print("-----------------")
-    print("     Results     ")
-    print("-----------------")
+#     print("-----------------")
+#     print("     Results     ")
+#     print("-----------------")
 
-    print("answers: ", end="")
-    for answer in answers:
-        print(answer, end=" ")
-    print()
+#     print("answers: ", end="")
+#     for answer in answers:
+#         print(answer, end=" ")
+#     print()
 
-    print("guesses: ", end="")
-    for guess in guesses:
-        print(guess, end=" ")
-    print()
+#     print("guesses: ", end="")
+#     for guess in guesses:
+#         print(guess, end=" ")
+#     print()
 
-score = int(score / len(questions) * 100)
-print(f"Your score is: {score}%")
+# score = int(score / len(questions) * 100)
+# print(f"Your score is: {score}%")
+
+#A dictionary
+
+# capitals = {"USA": "Washington D.C.",
+#             "India": "New Delhi",
+#             "China": "Beijing",
+#             "Russia": "Moscow"}
+
+# print(capitals.get("USA"))
+
+# capitals.update({"Germany": "Berlin"})
+# capitals.pop("China")
+# capitals.popitem()
+# capitals.clear()
+
+# keys = capitals.keyskeys()
+
+# print(keys)
+
+# values = capitals.values()
+# for value in capitals.values():
+#     print(value)
+
+# items = capitals.items()
+# for key, value in capitals.items():
+#     print(f"{key}: {value}")
+
+#Exercicio 
+
+# Lista de Compras: Crie uma lista chamada compras com os seguintes itens: "leite", "ovos", "pão", "frutas", "carne".
+
+# Imprima a lista completa.
+# Adicione "iogurte" à lista.
+# Remova "carne" da lista.
+# Imprima a lista atualizada.
+# Verifique se "frutas" está na lista. Imprima o resultado.
+
+# compras = ["leite", "ovos", "pão", "frutas", "carne"]
+
+#1 - print(compras)
+
+#2 - compras.append("iogurte")
+# print(compras)
+
+# 3 - compras.remove("carne")
+
+# 4 - print(compras)
+
+# 5 - if "frutas" in compras:
+#     print("Frutas está na lista")
+# else:
+#     print("Frutas não está na lista")
+
+#Exercicio 2
+
+# Números Pares: Crie uma lista chamada numeros com os números de 1 a 10.
+
+# Crie uma nova lista chamada pares contendo apenas os números pares da lista numeros.
+# Imprima a lista pares.
+
+num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
