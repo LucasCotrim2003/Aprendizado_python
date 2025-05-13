@@ -667,6 +667,5 @@
 # Crie uma nova lista chamada pares contendo apenas os números pares da lista numeros.
 # Imprima a lista pares.
 
-num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
