@@ -1,4 +1,5 @@
 from database import criar_conexao, executar_query, fechar_conexao
+import GastosApp from front.js
 
 conexao = criar_conexao("Financeiro.db")
 executar_query(conexao, """
@@ -20,7 +21,7 @@ def adicionar_item(categorias):
         return
     
     if not categoria:
-        print("Categoria não pode ser vazia.")
+        print("Categoria não pode ser vazia")
         return
     if categoria not in categorias:
         categorias[categoria] = []

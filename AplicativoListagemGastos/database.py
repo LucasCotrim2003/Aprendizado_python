@@ -12,11 +12,11 @@ def criar_conexao(db_file):
     return conexao
 
 def executar_query(conexao, query, params=None):
-    """Executa uma única query no banco de dados com parâmetros opcionais."""
+
     try:
         cursor = conexao.cursor()
         if params:
-            cursos.execute(query,params)
+            cursor.execute(query,params)
         else:
             cursor.execute(query)
             conexao.commit()
