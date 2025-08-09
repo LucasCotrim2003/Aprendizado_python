@@ -1,7 +1,30 @@
-P = float(input("Insira o total positivo: "))
-N = float(input("Insira o total negativo: "))
+import random
 
-if P and N != float:
-    print(f"o Total foi: {P - N}")
-else:
-    print("Valor inserido inválido!")
+Contador ={} 
+conta =[]
+
+
+gasto = input("Digite o valor gasto: ")
+categoria = input('Digite a categoria do gasto: ')
+
+conta.append(categoria)
+conta.append(gasto)
+
+gerador_chave = '123456789!@#$%¨&*'
+chave = ''
+
+for i in range(10):
+    chave += random.choice(gerador_chave)
+    Contador = {chave: conta}
+
+print(Contador)
+
+
+    
+
+
+
+
+
+
+
