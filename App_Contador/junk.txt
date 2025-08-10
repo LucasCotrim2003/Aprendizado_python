@@ -1,0 +1,41 @@
+import random
+#P = float(input("Insira o total positivo: "))
+#N = float(input("Insira o total negativo: "))
+
+#print(f"o Total foi: {P - N}")
+
+#-------------------------
+
+#categorias = []
+#gastos = []
+#Contador = {}
+
+#gasto = input("Insira quanto foi gasto: ")
+#gastos.append(gastos)
+
+#categoria = input("Insira a categoria desse gasto: ") 
+
+#if categoria not in categorias:
+#    categorias.append(categoria)
+#    print("Categoria criada e item adicionado!")
+#else:
+#    print("Adicionado a categoria existente!")
+
+Contador = {}
+
+
+
+gasto = input("Insira o valor do gasto: ")
+categoria = input("Insira o nome da categoria!: ")
+if categoria not in Contador:
+    gerador_chave = '123456789!@#$%¨&*'
+    chave = ''
+    for i in range(12):
+        chave += random.choice(gerador_chave)
+    categoria = []
+    Contador = {chave: categoria} 
+    categoria.append(gasto)
+else:
+    categoria.append(gasto)
+
+print(categoria)
